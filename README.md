@@ -24,7 +24,7 @@ UserHub — это приложение на Flutter, которое демон�
 1. Клонируйте этот репозиторий:
 
     ```bash
-    git clone https://github.com/username/userhub_flutter.git
+    git clone https://github.com/unisheld/userhub_flutter.git
     cd userhub_flutter
     ```
 
