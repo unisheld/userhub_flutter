@@ -1,16 +1,64 @@
-# userhub
+# UserHub Flutter
 
-A new Flutter project.
+UserHub — это приложение на Flutter, которое демонстрирует, как загружать и отображать список пользователей с удаленного API.
 
-## Getting Started
+## Возможности:
+- Загружает список пользователей с REST API.
+- Отображает информацию о пользователях в списке.
+- Обрабатывает состояния загрузки и ошибки.
+- Использует архитектуру Clean Architecture.
+- Применяет управление состоянием с помощью библиотеки `Riverpod`.
 
-This project is a starting point for a Flutter application.
+## Быстрый старт
 
-A few resources to get you started if this is your first Flutter project:
+### Необходимые условия
+Убедитесь, что у вас установлен Flutter. Если нет, следуйте инструкции по установке: [Flutter Install](https://flutter.dev/docs/get-started/install).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Также убедитесь, что у вас установлены следующие инструменты:
+- **Dart SDK**
+- **Flutter SDK**
+- **Android Studio** или **Visual Studio Code** для разработки.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Запуск приложения
+
+1. Клонируйте этот репозиторий:
+
+    ```bash
+    git clone https://github.com/username/userhub_flutter.git
+    cd userhub_flutter
+    ```
+
+2. Установите все зависимости:
+
+    ```bash
+    flutter pub get
+    ```
+
+3. Запустите приложение на симуляторе/эмуляторе или подключенном устройстве:
+
+    ```bash
+    flutter run
+    ```
+
+### Структура проекта
+
+- **`lib/features/user/data/`**: Слой данных (API сервисы, модели и репозитории).
+- **`lib/features/user/domain/`**: Доменный слой (сущности, бизнес-логика и репозитории).
+- **`lib/features/user/presentation/`**: Презентационный слой (провайдеры, экраны UI).
+- **`lib/services/`**: Сервисы для выполнения операций, таких как запросы к API.
+
+### Используемые технологии
+
+- **Flutter** — фреймворк для создания кросс-платформенных мобильных приложений.
+- **Riverpod** — библиотека для управления состоянием.
+- **Dio** — библиотека для работы с HTTP-запросами.
+- **Retrofit** — библиотека для генерации запросов к REST API.
+- **Freezed** — библиотека для генерации неизменяемых классов, таких как модели данных.
+- **Dartz** — библиотека для функционального программирования в Dart.
+
+## Примечания
+
+- Приложение использует API с публичным доступом (https://jsonplaceholder.typicode.com).
+- В коде реализована обработка ошибок с использованием `Either` для функциональной обработки результата.
+- Состояния загрузки и ошибки отображаются через виджеты в UI.
+
